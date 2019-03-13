@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.post('/',function(req,res){
+    var secret = req.body.secret || null;
     if(!secret || secret !== process.env.SECRET) {
         throw new Error('Secret not provided or invalid secret')
     }
