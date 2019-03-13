@@ -9,7 +9,7 @@ const mg = mailgun({apiKey: process.env.API_KEY, domain: DOMAIN});
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post('/send-email',function(req,res){
+app.post('/',function(req,res){
     if(!secret || secret !== process.env.SECRET) {
         throw new Error('Secret not provided or invalid secret')
     }
