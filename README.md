@@ -21,7 +21,8 @@ simple sender for Chatfuel using nodeJS and Express
 	"telefono" : "8888-8888",
 	"cedula" : "001-147584-0018D",
 	"email" : "test@test.com",
-	"tipoConsulta" : "consulta de prueba"
-	"secret" : "send it on the request" 
+	"tipoConsulta" : "consulta de prueba",
+	"secret" : "send it on the request",
+    "to" : "Correo electronico"
 }
 ```

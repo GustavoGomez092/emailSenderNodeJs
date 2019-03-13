@@ -19,10 +19,11 @@ app.post('/send-email',function(req,res){
     var cedula = req.body.idNumber || null;
     var tipoConsulta = req.body.tipoDeGestion || null;
     var email =req.body.email || null;
+    var to = req.body.to || null;
 
     var data = {
         from: "Mailgun Sandbox <postmaster@sandbox3ad95a6b9af24a96880c57c18912e5ba.mailgun.org>",
-        to: "ago@topfloormarketing.net",
+        to: to,
         subject: "Conversion chatbot",
         html: `<table>
                 <tr>
