@@ -14,7 +14,6 @@ app.post('/',function(req,res){
     if(!secret || secret !== process.env.SECRET) {
         throw new Error('Secret not provided or invalid secret')
     }
-    console.log(req)
     var nombre = req.body.fullName || null;
     var telefono = req.body.phoneNumber || null;
     var cedula = req.body.idNumber || null;
@@ -40,7 +39,7 @@ app.post('/',function(req,res){
                     <td>${cedula}</td>
                 </tr>
                 <tr>
-                    <td>Emial</td>
+                    <td>Email</td>
                     <td>${email}</td>
                 </tr>
                 <tr>
